@@ -30,4 +30,17 @@ public class Product {
         return price;
     }
 }
-
+//Activity 4 — Draw the Product UML Class Diagram
+//---------------------------------------------------------
+//Product                                                 -
+//---------------------------------------------------------
+//- id : Long                                             -
+//- name : String                                         -
+//- price : double                                        -
+//---------------------------------------------------------
+//+ Product()                                             -
+//+ Product(id : Long, name : String, price : double)     -
+//+ getId() : Long                                        -
+//+ getName() : String                                    -
+//+ getPrice() : double                                   -
+//---------------------------------------------------------
