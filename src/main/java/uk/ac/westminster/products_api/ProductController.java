@@ -6,13 +6,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@RestController
-@RequestMapping("/products")
+@RestController // Tells Spring this class handles API requests
 
-public class ProductController {
-    @GetMapping("/{id}")
+@RequestMapping("/products") // Main URL for products
+
+public class ProductController { // Class that handles product requests
+
+    @GetMapping("/{id}") // Handles GET /products/1 to retrieve a product
+
     public Product getById(@PathVariable Long id) {
-        return new Product(id, "Laptop", 999.99);
-    }
+        // Reads the ID from the URL and returns a Product
 
+        return new Product(id, "Laptop", 999.99);
+        // Creates a Laptop with this ID and price, then sends it back
+    }
 }
