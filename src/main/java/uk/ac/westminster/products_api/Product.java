@@ -3,9 +3,16 @@ package uk.ac.westminster.products_api;
 // Product class stores a product's ID, name and price.
 // The constructor gives these values to a new Product object.
 public class Product {
-    public Long id;
-    public String name;
-    public double price;
+    // T2, Activity 2, Step 15 - Prediction:
+// Activity 2: Private fields hide the data.
+// Without getters, Swagger shows empty (empty JSON){}.
+// With getters, Swagger shows the product details again.
+// Status 200 means the request worked.
+    private Long id;
+    private String name;
+    private double price;
+
+    public Product() {}
 
     public Product(Long id, String name, double price) {
         this.id = id;
@@ -13,7 +20,14 @@ public class Product {
         this.price = price;
     }
 
-
-
+    public Long getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+    public double getPrice() {
+        return price;
+    }
 }
 
